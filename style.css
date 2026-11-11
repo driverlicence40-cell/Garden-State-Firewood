@@ -1,0 +1,748 @@
+/* =========================================================
+   BOISPRO — Professional Stylesheet
+   Images: billes de bois, troncs, transport de bois
+   ========================================================= */
+
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #2c2c2c;
+  background: #f9f7f4;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6b4226;
+}
+
+.navbar nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  color: #555;
+  transition: color 0.2s;
+}
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #6b4226;
+  border-bottom: 2px solid #b8860b;
+}
+
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switcher {
+  display: flex;
+  gap: 0.4rem;
+  background: #f5efe6;
+  padding: 0.3rem;
+  border-radius: 30px;
+}
+.lang-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #6b4226;
+  transition: all 0.2s;
+}
+.lang-btn:hover { background: #ede0ce; }
+.lang-btn.active { background: #6b4226; color: #fff; }
+
+/* =========================================================
+   HERO (HOME) — Image de billes de bois empilées
+   ========================================================= */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  color: #fff;
+  background:
+    linear-gradient(rgba(20,12,5,0.68), rgba(20,12,5,0.68)),
+    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80')
+    center/cover no-repeat fixed;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.35) 100%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.6);
+  line-height: 1.15;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn-primary {
+  background: #b8860b;
+  color: #fff;
+  margin: 0 0.3rem;
+  box-shadow: 0 4px 14px rgba(184,134,11,0.4);
+}
+.btn-primary:hover {
+  background: #9c7008;
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 0 0.3rem;
+}
+.btn-secondary:hover {
+  background: #fff;
+  color: #6b4226;
+}
+
+/* ===== SECTION HEADINGS ===== */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #6b4226;
+}
+
+/* =========================================================
+   TRUST — Cartes avec images de troncs / transport
+   ========================================================= */
+.trust {
+  padding: 4rem 2rem;
+  background: #fff;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.trust-card {
+  position: relative;
+  text-align: center;
+  padding: 2.5rem 1.2rem 1.8rem;
+  border-radius: 14px;
+  background: #f9f7f4;
+  overflow: hidden;
+  transition: transform 0.35s, box-shadow 0.35s;
+  border: 1px solid #ede3d3;
+}
+.trust-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(107,66,38,0.15);
+}
+.trust-card .icon {
+  font-size: 2.6rem;
+  display: inline-flex;
+  width: 72px;
+  height: 72px;
+  background: #fff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 16px rgba(107,66,38,0.15);
+}
+.trust-card h3 {
+  color: #6b4226;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.trust-card p { color: #666; font-size: 0.92rem; }
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+.testimonials { padding: 4rem 2rem; background: #f0ebe3; }
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.testimonial {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #b8860b;
+  font-style: italic;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+.testimonial span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #6b4226;
+  font-style: normal;
+}
+
+/* =========================================================
+   CTA — Image de transport de bois (camion / grumes)
+   ========================================================= */
+.cta {
+  position: relative;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(rgba(60,35,15,0.75), rgba(60,35,15,0.85)),
+    url('https://images.unsplash.com/photo-1610047750862-1b6c02f5b8cb?auto=format&fit=crop&w=1920&q=80')
+    center/cover no-repeat;
+}
+.cta h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* =========================================================
+   CATALOGUE HERO — Image de troncs empilés
+   ========================================================= */
+.catalogue-hero {
+  position: relative;
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(60,35,15,0.82) 0%, rgba(107,66,38,0.72) 60%, rgba(184,134,11,0.65) 100%),
+    url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1920&q=80')
+    center/cover no-repeat;
+}
+.catalogue-hero-content {
+  max-width: 750px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.catalogue-hero .badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.18);
+  padding: 0.45rem 1.1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.catalogue-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 800;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.5);
+}
+.catalogue-hero p {
+  font-size: 1.15rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1.8rem;
+  flex-wrap: wrap;
+}
+.hero-stats div { display: flex; flex-direction: column; align-items: center; }
+.hero-stats strong {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffd966;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.hero-stats span {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 2rem 1rem 1rem;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 0.6rem 1.3rem;
+  border: 2px solid #e0d5c5;
+  background: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #6b4226;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-size: 0.9rem;
+}
+.filter-btn:hover { border-color: #b8860b; transform: translateY(-2px); }
+.filter-btn.active {
+  background: #6b4226;
+  color: #fff;
+  border-color: #6b4226;
+  box-shadow: 0 4px 12px rgba(107,66,38,0.3);
+}
+
+/* =========================================================
+   PRODUCT CARDS — Image de bois sur chaque carte
+   ========================================================= */
+.catalogue { padding: 2rem; max-width: 1250px; margin: 0 auto; }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(107,66,38,0.10);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f0e9e0;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(107,66,38,0.22);
+}
+
+/* Image en haut de la carte (remplace l'emoji) */
+.product-img {
+  height: 210px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: transform 0.5s ease;
+  font-size: 0; /* masque l'emoji si présent */
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.product-card:hover .product-img {
+  transform: scale(1.06);
+}
+.product-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.25) 100%);
+  pointer-events: none;
+}
+
+/* Images spécifiques pour chaque produit (via les classes d'index) */
+.product-card:nth-child(1) .product-img {
+  background-image: url('https://images.unsplash.com/photo-1611174743420-3d7df880ce32?auto=format&fit=crop&w=800&q=80'); /* bois de chauffage */
+}
+.product-card:nth-child(2) .product-img {
+  background-image: url('https://images.unsplash.com/photo-1587271339318-2c1f9d8b05f7?auto=format&fit=crop&w=800&q=80'); /* planches */
+}
+.product-card:nth-child(3) .product-img {
+  background-image: url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=80'); /* charpente */
+}
+.product-card:nth-child(4) .product-img {
+  background-image: url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80'); /* bois rond */
+}
+.product-card:nth-child(5) .product-img {
+  background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80'); /* mobilier bois */
+}
+.product-card:nth-child(6) .product-img {
+  background-image: url('https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?auto=format&fit=crop&w=800&q=80'); /* copeaux / sciure */
+}
+
+.product-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #ff6b35;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.product-card h3 {
+  color: #3d2512;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1.2rem 1.5rem 0.3rem;
+}
+.product-card p {
+  color: #777;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  padding: 0 1.5rem;
+  flex-grow: 1;
+}
+.product-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1rem 1.5rem 1.5rem;
+  margin-top: auto;
+  border-top: 1px dashed #eee;
+}
+.product-footer .price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #b8860b;
+}
+.product-footer .price small {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #999;
+  display: block;
+  margin-top: 2px;
+}
+.btn-order {
+  display: inline-block;
+  background: #6b4226;
+  color: #fff;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.25s;
+}
+.btn-order:hover {
+  background: #b8860b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(184,134,11,0.35);
+}
+
+/* =========================================================
+   ORDER PAGE
+   ========================================================= */
+.commande-hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  color: #fff;
+  background:
+    linear-gradient(rgba(60,35,15,0.75), rgba(60,35,15,0.85)),
+    url('https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1920&q=80')
+    center/cover no-repeat;
+}
+.commande-hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.5);
+}
+.commande-hero p {
+  color: #f2e6d5;
+  font-size: 1.05rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.commande-wrapper {
+  max-width: 1150px;
+  margin: -2rem auto 4rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* SUMMARY */
+.order-summary {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 30px rgba(107,66,38,0.15);
+  border-top: 5px solid #b8860b;
+  position: sticky;
+  top: 100px;
+}
+.order-summary h2 {
+  font-size: 1.2rem;
+  color: #3d2512;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+}
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+.summary-item strong { color: #3d2512; font-weight: 700; text-align: right; }
+.summary-divider {
+  height: 1px;
+  background: repeating-linear-gradient(90deg, #ddd 0, #ddd 5px, transparent 5px, transparent 10px);
+  margin: 0.8rem 0;
+}
+.summary-item.total { font-size: 1.05rem; padding: 1rem 0; }
+.summary-item.total strong { font-size: 1.5rem; color: #b8860b; font-weight: 800; }
+.summary-note {
+  margin-top: 1.2rem;
+  padding: 0.9rem;
+  background: #fff8e1;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  color: #8a6d00;
+  line-height: 1.5;
+}
+
+/* FORM */
+.commande-form { display: flex; flex-direction: column; gap: 1.8rem; }
+.form-step {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 24px rgba(107,66,38,0.10);
+  border: 1px solid #f0e9e0;
+}
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f5efe6;
+}
+.step-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b8860b, #6b4226);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(184,134,11,0.3);
+  flex-shrink: 0;
+}
+.step-header h2 {
+  font-size: 1.3rem;
+  color: #3d2512;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.form-group.full-width { grid-column: 1 / -1; }
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #6b4226;
+  font-size: 0.9rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid #ede5d8;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fefcf9;
+  transition: all 0.25s;
+  color: #3d2512;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #bbb; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #b8860b;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(184,134,11,0.12);
+}
+
+/* PAYMENT */
+.payment-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #25d366;
+  margin-bottom: 1.5rem;
+}
+.payment-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.payment-box h3 {
+  color: #1a5c2e;
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+.payment-box p { color: #4a6b52; font-size: 0.92rem; line-height: 1.5; }
+
+/* SUBMIT BUTTON */
+.btn-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 1.1rem 2rem;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+  position: relative;
+  overflow: hidden;
+}
+.btn-submit::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s;
+}
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37,211,102,0.45);
+}
+.btn-submit:hover::before { left: 100%; }
+.btn-arrow { transition: transform 0.3s; }
+.btn-submit:hover .btn-arrow { transform: translateX(6px); }
+.secure-note {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #999;
+  margin-top: 1rem;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #2c2c2c;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px) {
+  .commande-wrapper { grid-template-columns: 1fr; margin-top: 1rem; }
+  .order-summary { position: static; order: 2; }
+  .commande-form { order: 1; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .navbar { flex-direction: column; gap: 0.8rem; padding: 1rem; }
+  .navbar nav a { margin: 0 0.7rem; }
+  .catalogue-hero h1 { font-size: 2rem; }
+  .commande-hero h1 { font-size: 1.8rem; }
+}
+
+@media (max-width: 600px) {
+  .hero-stats { gap: 1.5rem; }
+  .hero-stats strong { font-size: 1.5rem; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-step { padding: 1.5rem; }
+  .product-img { height: 180px; }
+}

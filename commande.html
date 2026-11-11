@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page.title.order">Order — BoisPro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🌳 Garden State Firewood</div>
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a>
+      <a href="commande.html" class="active" data-i18n="nav.order">Order</a>
+    </nav>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">🇬🇧 EN</button>
+      <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+      <button class="lang-btn" data-lang="es">🇪🇸 ES</button>
+    </div>
+  </header>
+
+  <section class="commande-hero">
+    <h1 data-i18n="order.hero.title">Complete your order</h1>
+    <p data-i18n="order.hero.subtitle">Fill in the form and pay via WhatsApp in one click</p>
+  </section>
+
+  <section class="commande-wrapper">
+
+    <!-- SUMMARY -->
+    <aside class="order-summary">
+      <h2 data-i18n="order.summary.title">📋 Summary</h2>
+      <div class="summary-item">
+        <span data-i18n="order.summary.product">Product</span>
+        <strong id="summary-produit">—</strong>
+      </div>
+      <div class="summary-item">
+        <span data-i18n="order.summary.quantity">Quantity</span>
+        <strong id="summary-quantite">1</strong>
+      </div>
+      <div class="summary-divider"></div>
+      <div class="summary-item total">
+        <span data-i18n="order.summary.total">Estimated total</span>
+        <strong id="summary-total">—</strong>
+      </div>
+      <div class="summary-note" data-i18n="order.summary.note">
+        💬 Payment is finalized via WhatsApp with our team.
+      </div>
+    </aside>
+
+    <!-- FORM -->
+    <form id="form-commande" class="commande-form">
+
+      <!-- STEP 1 -->
+      <div class="form-step">
+        <div class="step-header">
+          <span class="step-number">1</span>
+          <h2 data-i18n="order.step1">Your information</h2>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nom" data-i18n="order.label.lastname">Last name *</label>
+            <input type="text" id="nom" required data-i18n-placeholder="order.ph.lastname" placeholder="Ex: Dupont">
+          </div>
+          <div class="form-group">
+            <label for="prenom" data-i18n="order.label.firstname">First name *</label>
+            <input type="text" id="prenom" required data-i18n-placeholder="order.ph.firstname" placeholder="Ex: Jean">
+          </div>
+          <div class="form-group full-width">
+            <label for="residence" data-i18n="order.label.residence">Residence *</label>
+            <input type="text" id="residence" required data-i18n-placeholder="order.ph.residence" placeholder="Ex: Yaoundé, Bastos">
+          </div>
+          <div class="form-group full-width">
+            <label for="livraison" data-i18n="order.label.delivery">Delivery address *</label>
+            <input type="text" id="livraison" required data-i18n-placeholder="order.ph.delivery" placeholder="Ex: Mvog-Mbi district">
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="form-step">
+        <div class="step-header">
+          <span class="step-number">2</span>
+          <h2 data-i18n="order.step2">Your order</h2>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="produit" data-i18n="order.label.product">Product *</label>
+            <select id="produit" required>
+              <option value="" data-i18n="order.select">-- Choose --</option>
+              <option value="Firewood" data-price="15000" data-i18n="prod.firewood">Firewood</option>
+              <option value="Planks" data-price="5000" data-i18n="prod.planks">Planks</option>
+              <option value="Timber" data-price="25000" data-i18n="prod.timber">Timber</option>
+              <option value="Round wood" data-price="8000" data-i18n="prod.roundwood">Round wood</option>
+              <option value="Furniture wood" data-price="20000" data-i18n="prod.furniture">Furniture wood</option>
+              <option value="Shavings" data-price="3000" data-i18n="prod.shavings">Shavings</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantite" data-i18n="order.label.quantity">Quantity *</label>
+            <input type="number" id="quantite" min="1" value="1" required>
+          </div>
+          <div class="form-group full-width">
+            <label for="message" data-i18n="order.label.message">Message / details (optional)</label>
+            <textarea id="message" rows="3" data-i18n-placeholder="order.ph.message" placeholder="Ex: Deliver before Friday..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="form-step">
+        <div class="step-header">
+          <span class="step-number">3</span>
+          <h2 data-i18n="order.step3">Payment</h2>
+        </div>
+        <div class="payment-box">
+          <div class="payment-icon">💬</div>
+          <div>
+            <h3 data-i18n="order.pay.title">Payment via WhatsApp</h3>
+            <p data-i18n="order.pay.text">By clicking below, you will be redirected to WhatsApp to finalize your order and complete payment with our team.</p>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">
+          <span data-i18n="order.pay.button">✅ Validate and pay via WhatsApp</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <p class="secure-note" data-i18n="order.pay.note">🔒 Your information is only shared with our sales team.</p>
+      </div>
+
+    </form>
+  </section>
+
+  <footer>
+    <p data-i18n="footer.text">© 2025 BoisPro — All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

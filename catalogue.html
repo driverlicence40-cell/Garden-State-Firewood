@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page.title.catalogue">Catalogue — BoisPro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🌳 Garden State Firewood</div>
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="catalogue.html" class="active" data-i18n="nav.catalogue">Catalogue</a>
+      <a href="commande.html" data-i18n="nav.order">Order</a>
+    </nav>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">🇬🇧 EN</button>
+      <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+      <button class="lang-btn" data-lang="es">🇪🇸 ES</button>
+    </div>
+  </header>
+
+  <!-- CATALOGUE HERO -->
+  <section class="catalogue-hero">
+    <div class="catalogue-hero-content">
+      <span class="badge" data-i18n="cat.hero.badge">🌲 Premium selected wood</span>
+      <h1 data-i18n="cat.hero.title">Our Catalogue</h1>
+      <p data-i18n="cat.hero.subtitle">Choose from our quality wood range, ready to be delivered to you.</p>
+      <div class="hero-stats">
+        <div><strong>6+</strong><span data-i18n="cat.stats.products">Products</span></div>
+        <div><strong>48h</strong><span data-i18n="cat.stats.delivery">Delivery</span></div>
+        <div><strong>100%</strong><span data-i18n="cat.stats.satisfaction">Satisfaction</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="filters">
+    <button class="filter-btn active" data-filter="all" data-i18n="cat.filter.all">All</button>
+    <button class="filter-btn" data-filter="heating" data-i18n="cat.filter.heating">Heating</button>
+    <button class="filter-btn" data-filter="construction" data-i18n="cat.filter.construction">Construction</button>
+    <button class="filter-btn" data-filter="carpentry" data-i18n="cat.filter.carpentry">Carpentry</button>
+    <button class="filter-btn" data-filter="misc" data-i18n="cat.filter.misc">Misc</button>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="catalogue">
+    <div class="product-grid">
+
+      <div class="product-card" data-category="heating">
+        <div class="product-badge" data-i18n="cat.popular">Popular</div>
+        <div class="product-img">🔥</div>
+        <h3 data-i18n="prod.firewood">Firewood</h3>
+        <p data-i18n="prod.firewood.desc">Dry wood stack, ideal for fireplace and stove.</p>
+        <div class="product-footer">
+          <span class="price">15,000 <small data-i18n="prod.unit.stack">FCFA / stack</small></span>
+          <a href="commande.html?produit=Firewood" class="btn-order" data-i18n="cat.orderBtn">Order →</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="carpentry">
+        <div class="product-img">🪵</div>
+        <h3 data-i18n="prod.planks">Carpentry planks</h3>
+        <p data-i18n="prod.planks.desc">Planed planks, ready to use.</p>
+        <div class="product-footer">
+          <span class="price">5,000 <small data-i18n="prod.unit.plank">FCFA / plank</small></span>
+          <a href="commande.html?produit=Planks" class="btn-order" data-i18n="cat.orderBtn">Order →</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="construction">
+        <div class="product-img">🏗️</div>
+        <h3 data-i18n="prod.timber">Timber</h3>
+        <p data-i18n="prod.timber.desc">Solid beams for framing and construction.</p>
+        <div class="product-footer">
+          <span class="price">25,000 <small data-i18n="prod.unit.beam">FCFA / beam</small></span>
+          <a href="commande.html?produit=Timber" class="btn-order" data-i18n="cat.orderBtn">Order →</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="construction">
+        <div class="product-img">🌲</div>
+        <h3 data-i18n="prod.roundwood">Round wood</h3>
+        <p data-i18n="prod.roundwood.desc">Raw wood for fencing and outdoor landscaping.</p>
+        <div class="product-footer">
+          <span class="price">8,000 <small data-i18n="prod.unit.unit">FCFA / unit</small></span>
+          <a href="commande.html?produit=Round+wood" class="btn-order" data-i18n="cat.orderBtn">Order →</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="carpentry">
+        <div class="product-img">🪑</div>
+        <h3 data-i18n="prod.furniture">Furniture wood</h3>
+        <p data-i18n="prod.furniture.desc">Noble wood for your fine carpentry projects.</p>
+        <div class="product-footer">
+          <span class="price">20,000 <small data-i18n="prod.unit.lot">FCFA / lot</small></span>
+          <a href="commande.html?produit=Furniture+wood" class="btn-order" data-i18n="cat.orderBtn">Order →</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="misc">
+        <div class="product-img">🧱</div>
+        <h3 data-i18n="prod.shavings">Shavings & sawdust</h3>
+        <p data-i18n="prod.shavings.desc">Bag of shavings for litter or compost.</p>
+        <div class="product-footer">
+          <span class="price">3,000 <small data-i18n="prod.unit.bag">FCFA / bag</small></span>
+          <a href="commande.html?produit=Shavings" class="btn-order" data-i18n="cat.orderBtn">Order →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p data-i18n="footer.text">© 2025 BoisPro — All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
